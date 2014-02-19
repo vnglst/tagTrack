@@ -1,0 +1,28 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 30px 5px;
+}
+
+.barWrapper {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.legenda {
+    float: left;
+    width: 100px;
+}
+
+.bar {
+    margin-top: 3px;
+    width: 1px;
+    height: 25px;
+    background-color: #dd4b39;
+}
+
+.hours {
+    margin-left: 5px;
+ }

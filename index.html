@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset='utf-8'>
+        <title>tagTrack - track your time with #hashtags in Google Calendar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <!-- Bootstrap -->
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">tagTrack</a>
+            </div>
+            <!-- navbar-header -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">Results</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" id='js-authbutton' onclick='handleAuthClick()'>Sign in</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- navbar-collapse -->
+        </nav>
+        <div class="starter-template">
+            <div class="col-md-2 calendars">
+                <ul class="nav nav-pills nav-stacked js-calendars">
+                    <li>
+                        <a href="#">API not connected</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- col-md-6 calendars -->
+            <div class="col-md-10 results">
+                <div class="btn-toolbar">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" id="js-previousButton">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </button>
+                        <button type="button" class="btn btn-primary" id="js-todayButton">Today</button>
+                        <button type="button" class="btn btn-default" id="js-nextButton">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+                    <!-- btn-group -->
+                    <div class="btn-group pull-right" data-toggle="buttons">
+                        <label class="btn btn-default " id="js-dayButton">
+                            <input type="radio" name="options">Day</label>
+                        <label class="btn btn-default active" id="js-weekButton">
+                            <input type="radio" name="options">Week</label>
+                        <label class="btn btn-default" id="js-monthButton">
+                            <input type="radio" name="options">Month</label>
+                        <label class="btn btn-default" id="js-yearButton">
+                            <input type="radio" name="options">Year</label>
+                    </div>
+                    <!-- btn-group -->
+                </div>
+                <!-- btn-toolbar -->
+                <div id="js-barGraph"></div>
+                <!-- js-barGraph -->
+                <div id="js-results">
+                    <div id="js-textResults"></div>
+                    <div id="js-barGraph"></div>
+                </div>
+                <!-- js-results -->
+            </div>
+            <!-- col-md-6 results -->
+        </div>
+        <!-- starter-template -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="API-auth.js"></script>
+        <script src="myMethods.js"></script>
+        <script src="TT-Model.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+        <script src="TT-View.js"></script>
+        <script src="TT-Controller.js"></script>
+        
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-43209054-1', 'koenvangilst.nl');
+            ga('send', 'pageview');
+        </script>
+    </body>
+
+</html>
